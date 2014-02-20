@@ -1,228 +1,65 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[宅基地]]></title>
+  <subtitle><![CDATA[技术人生]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://www.zhaijd.cn/"/>
+  <updated>2014-02-20T14:16:37.247Z</updated>
+  <id>http://www.zhaijd.cn/</id>
   
-  <title>博客：2014/2 | 宅基地</title>
-  <meta name="author" content="Winters">
+  <author>
+    <name><![CDATA[Winters]]></name>
+    <email><![CDATA[suyuan19@gmail.com]]></email>
+  </author>
   
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
-  
-  <meta property="og:site_name" content="宅基地"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-   <link rel="apple-touch-icon" href="/icon.png" />
-   <link rel="shortcut icon" href="/favicon.png" >
-   <link rel="alternate" href="http://xxx.xx/atom.xml" title="宅基地" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-</head>
-
-
-<body>
-  <div id="content" class="inner">
-    <aside id="sidebar" class="alignleft">
-      <div class="navigationBar">
-        <a href="/">宅基地</a>
-      </div>
-    	
-  <nav class="widget" id="menu">
-	<ul>
-    
-      <li class="cell"><a class="next" href="/">首页</a><li>
-    
-      <li class="cell"><a class="next" href="/archives/">博客</a><li>
-    
-      <li class="cell"><a class="next" href="/develop/">技术人生</a><li>
-    
-      <li class="cell"><a class="next" href="/about/">About</a><li>
-    
-      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
-    
-    </ul>
-</nav>
-
-  <div class="widget weibo">
-<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=110&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=0&isFans=0&uid=null&verifier=78e1ee4d&colors=ffffff,ffffff,999,000,ecfbfd&dpc=1"></iframe>
-</div>
-
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/技术杂项/">技术杂项</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-
-  
-<div class="widget tagcloud">
-  <h3 class="title">标签云</h3>
-  <div class="entry">
-    <a href="/tags/Markdown/" style="font-size: NaNpx;">Markdown</a><a href="/tags/Mou/" style="font-size: NaNpx;">Mou</a><a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a><a href="/tags/markdown/" style="font-size: NaNpx;">markdown</a><a href="/tags/mou/" style="font-size: NaNpx;">mou</a><a href="/tags/nodejs/" style="font-size: NaNpx;">nodejs</a><a href="/tags/旅行/" style="font-size: NaNpx;">旅行</a>
-  </div>
-</div>
-
-
-    	<footer id="footer" class="inner"><div class="copyright">
-  
-  &copy; 2014 Winters
-  
-</div>
-
-
-
-</footer>
-    </aside>
-    
-    
-    <div id="hidden-navigationBar" class="navigationBar">
-      <a href="/">宅基地</a>
-    </div>
-    <div id="main-col" class="alignright">
-    <div id="wrapper">
-      
-<h2 class="archive-title">2014/2</h2>
-
-
-  
-    
-<article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-  <header>
-      
-      
-  
-    <h1 class="title"><a href="/2014/02/20/first/">开篇辟地纪念</a></h1>
-  
-
-      <time datetime="2014-02-20T08:48:40.000Z"><a href="/2014/02/20/first/">2014-2月-20</a></time>
-      
-  </header>
-    <div class="entry">
-      
-        <h1 id="-">篇首语</h1>
+  <entry>
+    <title><![CDATA[开篇辟地纪念]]></title>
+    <link href="http://www.zhaijd.cn/2014/02/20/first/"/>
+    <id>http://www.zhaijd.cn/2014/02/20/first/</id>
+    <published>2014-02-20T08:48:40.000Z</published>
+    <updated>2014-02-20T10:44:02.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="-">篇首语</h1>
 <p>使用<code>MarkDown</code>在本地写自己的<code>Blogger</code>，并且托管到github与大家分享，貌似是一件<code>so core</code>的事情，我一直也想体验下，经过不断的选择，终于确定选用 nodejs 环境搭建，选择的框架是<a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! 傻瓜式的安装部署，很方便就在本地搞定了
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/02/20/first/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
+<a id="more"></a></p>
+]]></content>
+    <summary type="html"><![CDATA[<h1 id="-">篇首语</h1>
+<p>使用<code>MarkDown</code>在本地写自己的<code>Blogger</code>，并且托管到github与大家分享，貌似是一件<code>so core</code>的事情，我一直也想体验下，经过不断的选择，终于确定选用 nodejs 环境搭建，选择的框架是<a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! 傻瓜式的安装部署，很方便就在本地搞定了
+]]></summary>
     
-<article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
+      <category term="hexo" scheme="http://www.zhaijd.cn/tags/hexo/"/>
     
-      <img src="">
+      <category term="nodejs" scheme="http://www.zhaijd.cn/tags/nodejs/"/>
     
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
+      <category term="markdown" scheme="http://www.zhaijd.cn/tags/markdown/"/>
+    
+      <category term="mou" scheme="http://www.zhaijd.cn/tags/mou/"/>
+    
+  </entry>
   
-  <div class="post-content">
-  <header>
-      
-      
-  
-    <h1 class="title"><a href="/2014/02/20/niaochao/">北京之行</a></h1>
-  
-
-      <time datetime="2014-02-20T01:52:00.000Z"><a href="/2014/02/20/niaochao/">2014-2月-20</a></time>
-      
-  </header>
-    <div class="entry">
-      
-        <h1 id="-">鸟巢之行</h1>
+  <entry>
+    <title><![CDATA[北京之行]]></title>
+    <link href="http://www.zhaijd.cn/2014/02/20/niaochao/"/>
+    <id>http://www.zhaijd.cn/2014/02/20/niaochao/</id>
+    <published>2014-02-20T01:52:00.000Z</published>
+    <updated>2014-02-20T14:06:24.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="-">鸟巢之行</h1>
 <p><img src="/images/20140220/niaochao.jpg" alt="image"></p>
-
-	 
-	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 2014-2月-20</span><br />
-<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://www.zhaijd.cn"><strong>宅基地</strong></a></span>
-</p>
-       	 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  
+]]></content>
     
-<article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
     
-      <img src="">
+      <category term="旅行" scheme="http://www.zhaijd.cn/tags/%E6%97%85%E8%A1%8C/"/>
     
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
+  </entry>
   
-  <div class="post-content">
-  <header>
-      
-      
-  
-    <h1 class="title"><a href="/2014/02/20/mou/">Mou 使用帮助</a></h1>
-  
-
-      <time datetime="2014-02-19T20:37:00.000Z"><a href="/2014/02/20/mou/">2014-2月-20</a></time>
-      
-  </header>
-    <div class="entry">
-      
-        <h1 id="mou">Mou</h1>
+  <entry>
+    <title><![CDATA[Mou 使用帮助]]></title>
+    <link href="http://www.zhaijd.cn/2014/02/20/mou/"/>
+    <id>http://www.zhaijd.cn/2014/02/20/mou/</id>
+    <published>2014-02-19T20:37:00.000Z</published>
+    <updated>2014-02-20T12:58:04.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="mou">Mou</h1>
 <p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"></p>
 <h2 id="overview">Overview</h2>
 <p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
@@ -443,50 +280,15 @@ a start <span class="keyword">and</span> <span class="keyword">end</span> fence 
 <p>Don&#39;t forget to check Preferences, lots of useful options are there.</p>
 <p>Follow <a href="http://twitter.com/chenluois" target="_blank">@chenluois</a> on Twitter for the latest news.</p>
 <p>For feedback, use the menu <code>Help</code> - <code>Send Feedback</code></p>
-
-	 
-	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 2014-2月-20</span><br />
-<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://www.zhaijd.cn"><strong>宅基地</strong></a></span>
-</p>
-       	 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
+]]></content>
+    
+    
+      <category term="Mou" scheme="http://www.zhaijd.cn/tags/Mou/"/>
+    
+      <category term="Markdown" scheme="http://www.zhaijd.cn/tags/Markdown/"/>
+    
+      <category term="技术杂项" scheme="http://www.zhaijd.cn/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
   
-
-  <nav id="pagination">
-  
-  
-</nav>
-</div>
-    </div>
-    <div class="tabbar" onload="divideTabBar()">
-	
-      <div class="tabbaritem"><a class="next" href="/">首页</a></div>
-    
-      <div class="tabbaritem"><a class="next" href="/archives/">博客</a></div>
-    
-      <div class="tabbaritem"><a class="next" href="/develop/">技术人生</a></div>
-    
-      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
-    
-      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
-    
-</div>
-
-
-  </div>
-</body>
-</html>
+</feed>
