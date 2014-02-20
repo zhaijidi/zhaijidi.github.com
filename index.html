@@ -57,6 +57,8 @@
   
     <li><a href="/categories/技术杂项/">技术杂项</a><small>1</small></li>
   
+    <li><a href="/categories/生活琐事/">生活琐事</a><small>1</small></li>
+  
   </ul>
 </div>
 
@@ -116,8 +118,7 @@
   </header>
     <div class="entry">
       
-        <h1 id="-">篇首语</h1>
-<p>使用<code>MarkDown</code>在本地写自己的<code>Blogger</code>，并且托管到github与大家分享，貌似是一件<code>so core</code>的事情，我一直也想体验下，经过不断的选择，终于确定选用 nodejs 环境搭建，选择的框架是<a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! 傻瓜式的安装部署，很方便就在本地搞定了
+        <p>使用<code>MarkDown</code>在本地写自己的<code>Blogger</code>，并且托管到github与大家分享，貌似是一件<code>so cool</code>的事情，我一直也想体验下，按照网上的说法大部分都是基于Ruby的，之前折腾过，首先没有想深入的学习Ruby，其实之前部署环境的时候吃过苦头，所以坚决不选用Ruby的东东，庆幸的是备选方案还是挺多的，对比了几番后，最终选择基于<code>nodejs</code> 环境搭建的框架<a href="http://zespia.tw/hexo" target="_blank"><code>Hexo</code></a> 。
 
       
     </div>
@@ -168,153 +169,6 @@
       
         <h1 id="mou">Mou</h1>
 <p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"></p>
-<h2 id="overview">Overview</h2>
-<p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
-<h3 id="syntax">Syntax</h3>
-<h4 id="strong-and-emphasize">Strong and Emphasize</h4>
-<p><strong>strong</strong> or <strong>strong</strong> ( Cmd + B )</p>
-<p><em>emphasize</em> or <em>emphasize</em> ( Cmd + I )</p>
-<p><strong>Sometimes I want a lot of text to be bold.
-Like, seriously, a <em>LOT</em> of text</strong></p>
-<h4 id="blockquotes">Blockquotes</h4>
-<blockquote>
-<p>Right angle brackets &gt; are used for block quotes.</p>
-</blockquote>
-<h4 id="links-and-email">Links and Email</h4>
-<p>An email <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> link.</p>
-<p>Simple inline link <a href="http://chenluois.com" target="_blank">http://chenluois.com</a>, another inline link <a href="http://smallerapp.com" target="_blank">Smaller</a>, one more inline link with title <a href="http://resizesafari.com" title="a Safari extension" target="_blank">Resize</a>.</p>
-<p>A <a href="http://mouapp.com" title="Markdown editor on Mac OS X" target="_blank">reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
-<p>Titles ( or called tool tips ) in the links are optional.</p>
-<h4 id="images">Images</h4>
-<p>An inline image <img src="http://smallerapp.com/favicon.ico" alt="Smaller icon" title="Title here">, title is optional.</p>
-<p>A <img src="http://resizesafari.com/favicon.ico" alt="Resize icon" title="Title"> reference style image.</p>
-<h4 id="inline-code-and-block-code">Inline code and Block code</h4>
-<p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
-<pre><code>Indent each line by at least 1 tab, or 4 spaces.
-var Mou = exactlyTheAppIwant; 
-</code></pre><h4 id="ordered-lists">Ordered Lists</h4>
-<p>Ordered lists are created using &quot;1.&quot; + Space:</p>
-<ol>
-<li>Ordered list item</li>
-<li>Ordered list item</li>
-<li>Ordered list item</li>
-</ol>
-<h4 id="unordered-lists">Unordered Lists</h4>
-<p>Unordered list are created using &quot;*&quot; + Space:</p>
-<ul>
-<li>Unordered list item</li>
-<li>Unordered list item</li>
-<li>Unordered list item </li>
-</ul>
-<p>Or using &quot;-&quot; + Space:</p>
-<ul>
-<li>Unordered list item</li>
-<li>Unordered list item</li>
-<li>Unordered list item</li>
-</ul>
-<h4 id="hard-linebreak">Hard Linebreak</h4>
-<p>End a line with two or more spaces will create a hard linebreak, called <code>&lt;br /&gt;</code> in HTML. ( Control + Return )<br>Above line ended with 2 spaces.</p>
-<h4 id="horizontal-rules">Horizontal Rules</h4>
-<p>Three or more asterisks or dashes:</p>
-<hr>
-<hr>
-<hr>
-<h4 id="headers">Headers</h4>
-<p>Setext-style:</p>
-<h1 id="this-is-h1">This is H1</h1>
-<h2 id="this-is-h2">This is H2</h2>
-<p>atx-style:</p>
-<h1 id="this-is-h1">This is H1</h1>
-<h2 id="this-is-h2">This is H2</h2>
-<h3 id="this-is-h3">This is H3</h3>
-<h4 id="this-is-h4">This is H4</h4>
-<h5 id="this-is-h5">This is H5</h5>
-<h6 id="this-is-h6">This is H6</h6>
-<h3 id="extra-syntax">Extra Syntax</h3>
-<h4 id="footnotes">Footnotes</h4>
-<p>Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:</p>
-<p>That&#39;s some text with a footnote.[^1]</p>
-<p>[^1]: And that&#39;s the footnote.</p>
-<h4 id="strikethrough">Strikethrough</h4>
-<p>Wrap with 2 tilde characters:</p>
-<p><del>Strikethrough</del></p>
-<h4 id="fenced-code-blocks">Fenced Code Blocks</h4>
-<p>Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre>Fenced code blocks are like Stardard Markdown’s regular code
-blocks, except <span class="keyword">that</span> they’re <span class="keyword">not</span> indented <span class="keyword">and</span> instead rely <span class="function_start"><span class="keyword">on</span></span>
-a start <span class="keyword">and</span> <span class="keyword">end</span> fence lines <span class="keyword">to</span> delimit <span class="keyword">the</span> code block.
-</pre></td></tr></table></figure>
-
-<h4 id="tables">Tables</h4>
-<p>A simple table looks like this:</p>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-<th>Third Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
-<p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-<th>Third Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
-<p>Specify alignement for each column by adding colons to separator lines:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">First Header</th>
-<th style="text-align:center">Second Header</th>
-<th style="text-align:right">Third Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Left</td>
-<td style="text-align:center">Center</td>
-<td style="text-align:right">Right</td>
-</tr>
-<tr>
-<td style="text-align:left">Left</td>
-<td style="text-align:center">Center</td>
-<td style="text-align:right">Right</td>
-</tr>
-</tbody>
-</table>
 <h3 id="shortcuts-">Shortcuts 快捷键</h3>
 <h4 id="view">View</h4>
 <ul>
@@ -367,37 +221,15 @@ a start <span class="keyword">and</span> <span class="keyword">end</span> fence 
 <li>Comment（<code>插入注释</code>）: Cmd + /</li>
 <li>Hard Linebreak（<code>插入换行符</code>）: Control + Return</li>
 </ul>
-<h4 id="edit">Edit</h4>
-<ul>
-<li>Auto complete current word（<code>自动补全</code>）: Esc</li>
-<li>Find（<code>查找</code>）: Cmd + F</li>
-<li>Close find bar（<code>关闭查找</code>）: Esc</li>
-</ul>
-<h4 id="post">Post</h4>
-<ul>
-<li>Post on Scriptogr.am: Control + Shift + S</li>
-<li>Post on Tumblr: Control + Shift + T</li>
-</ul>
-<h4 id="export">Export</h4>
-<ul>
-<li>Export HTML（<code>导出HTML</code>）: Option + Cmd + E</li>
-<li>Export PDF（<code>导出PDF</code>）:  Option + Cmd + P</li>
-</ul>
-<h3 id="and-more-">And more?</h3>
-<p>Don&#39;t forget to check Preferences, lots of useful options are there.</p>
-<p>Follow <a href="http://twitter.com/chenluois" target="_blank">@chenluois</a> on Twitter for the latest news.</p>
-<p>For feedback, use the menu <code>Help</code> - <code>Send Feedback</code></p>
-
-	 
-	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-<span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/1814790134"><strong>陨_日</strong></a> - 2014-2月-20</span><br />
-<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://zhaijd.github.io"><strong>宅基地</strong></a></span>
-</p>
-       	 
+<p>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2014/02/20/mou/#more" class="more-link">Read More</a>
+          </div>
         
         
       
