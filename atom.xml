@@ -3,9 +3,9 @@
   <title><![CDATA[宅基地]]></title>
   <subtitle><![CDATA[技术人生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://www.zhaijd.cn/"/>
-  <updated>2014-02-20T14:22:53.196Z</updated>
-  <id>http://www.zhaijd.cn/</id>
+  <link href="http://zhaijd.github.io/"/>
+  <updated>2014-02-20T14:56:21.603Z</updated>
+  <id>http://zhaijd.github.io/</id>
   
   <author>
     <name><![CDATA[Winters]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[开篇辟地纪念]]></title>
-    <link href="http://www.zhaijd.cn/2014/02/20/first/"/>
-    <id>http://www.zhaijd.cn/2014/02/20/first/</id>
+    <link href="http://zhaijd.github.io/2014/02/20/first/"/>
+    <id>http://zhaijd.github.io/2014/02/20/first/</id>
     <published>2014-02-20T08:48:40.000Z</published>
     <updated>2014-02-20T10:44:02.000Z</updated>
     <content type="html"><![CDATA[<h1 id="-">篇首语</h1>
@@ -28,20 +28,20 @@
 <p>使用<code>MarkDown</code>在本地写自己的<code>Blogger</code>，并且托管到github与大家分享，貌似是一件<code>so core</code>的事情，我一直也想体验下，经过不断的选择，终于确定选用 nodejs 环境搭建，选择的框架是<a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! 傻瓜式的安装部署，很方便就在本地搞定了
 ]]></summary>
     
-      <category term="hexo" scheme="http://www.zhaijd.cn/tags/hexo/"/>
+      <category term="hexo" scheme="http://zhaijd.github.io/tags/hexo/"/>
     
-      <category term="nodejs" scheme="http://www.zhaijd.cn/tags/nodejs/"/>
+      <category term="nodejs" scheme="http://zhaijd.github.io/tags/nodejs/"/>
     
-      <category term="markdown" scheme="http://www.zhaijd.cn/tags/markdown/"/>
+      <category term="markdown" scheme="http://zhaijd.github.io/tags/markdown/"/>
     
-      <category term="mou" scheme="http://www.zhaijd.cn/tags/mou/"/>
+      <category term="mou" scheme="http://zhaijd.github.io/tags/mou/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[北京之行]]></title>
-    <link href="http://www.zhaijd.cn/2014/02/20/niaochao/"/>
-    <id>http://www.zhaijd.cn/2014/02/20/niaochao/</id>
+    <link href="http://zhaijd.github.io/2014/02/20/niaochao/"/>
+    <id>http://zhaijd.github.io/2014/02/20/niaochao/</id>
     <published>2014-02-20T01:52:00.000Z</published>
     <updated>2014-02-20T14:21:40.000Z</updated>
     <content type="html"><![CDATA[<h3 id="-">鸟巢之行</h3>
@@ -49,14 +49,14 @@
 ]]></content>
     
     
-      <category term="旅行" scheme="http://www.zhaijd.cn/tags/%E6%97%85%E8%A1%8C/"/>
+      <category term="旅行" scheme="http://zhaijd.github.io/tags/%E6%97%85%E8%A1%8C/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mou 使用帮助]]></title>
-    <link href="http://www.zhaijd.cn/2014/02/20/mou/"/>
-    <id>http://www.zhaijd.cn/2014/02/20/mou/</id>
+    <link href="http://zhaijd.github.io/2014/02/20/mou/"/>
+    <id>http://zhaijd.github.io/2014/02/20/mou/</id>
     <published>2014-02-19T20:37:00.000Z</published>
     <updated>2014-02-20T12:58:04.000Z</updated>
     <content type="html"><![CDATA[<h1 id="mou">Mou</h1>
@@ -74,7 +74,7 @@ Like, seriously, a <em>LOT</em> of text</strong></p>
 <p>Right angle brackets &gt; are used for block quotes.</p>
 </blockquote>
 <h4 id="links-and-email">Links and Email</h4>
-<p>An email <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;</a> link.</p>
+<p>An email <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> link.</p>
 <p>Simple inline link <a href="http://chenluois.com" target="_blank">http://chenluois.com</a>, another inline link <a href="http://smallerapp.com" target="_blank">Smaller</a>, one more inline link with title <a href="http://resizesafari.com" title="a Safari extension" target="_blank">Resize</a>.</p>
 <p>A <a href="http://mouapp.com" title="Markdown editor on Mac OS X" target="_blank">reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
 <p>Titles ( or called tool tips ) in the links are optional.</p>
@@ -283,11 +283,11 @@ a start <span class="keyword">and</span> <span class="keyword">end</span> fence 
 ]]></content>
     
     
-      <category term="Mou" scheme="http://www.zhaijd.cn/tags/Mou/"/>
+      <category term="Mou" scheme="http://zhaijd.github.io/tags/Mou/"/>
     
-      <category term="Markdown" scheme="http://www.zhaijd.cn/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://zhaijd.github.io/tags/Markdown/"/>
     
-      <category term="技术杂项" scheme="http://www.zhaijd.cn/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E9%A1%B9/"/>
+      <category term="技术杂项" scheme="http://zhaijd.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E9%A1%B9/"/>
     
   </entry>
   
