@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Bower 用于web前端开发的包管理器 | 宅基地</title>
+  <meta name="author" content="Winters">
+  
+  <meta name="description" content="前言
+一个新的web项目开始，我们总是很自然地去下载需要用到的js类库文件，比如jQuery，去官网下载名为jquery-1.10.2.min.js文件，放到我们的项目里。当项目又需要bootstrap的时候，我们会重复刚才的工作，去bootstrap官网下载对应的类库。如果bootstrap所依赖的jQuery并不是1.10.2，而是2.0.3时，我们会再重新下载一个对应版本的jQuery替换原来的。
+包管理是个复杂的问题，我们要知道谁依赖谁，还要明确哪个版本依赖哪个版本。这些对于开发人员来说，负担过重了。bower作为一个js依赖管理的工具，提供一种理想包管理方式，借助了npm的一些思想，为我们提供一个舒服的开发环境。
+你要还不动起手来试试bower，那你一定不会知道，前端开发是件多么享受的事。">
+  
+  
+  <meta property="og:title" content="Bower 用于web前端开发的包管理器"/>
+  <meta property="og:site_name" content="宅基地"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+   <link rel="apple-touch-icon" href="/icon.png" />
+   <link rel="shortcut icon" href="/favicon.png" >
+   <link rel="alternate" href="http://xxx.xx/atom.xml" title="宅基地" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="content" class="inner">
+    <aside id="sidebar" class="alignleft">
+      <div class="navigationBar">
+        <a href="/">宅基地</a>
+      </div>
+    	
+  <nav class="widget" id="menu">
+	<ul>
+    
+      <li class="cell"><a class="next" href="/">首页</a><li>
+    
+      <li class="cell"><a class="next" href="/archives/">博客</a><li>
+    
+      <li class="cell"><a class="next" href="/develop/">技术人生</a><li>
+    
+      <li class="cell"><a class="next" href="/about/">About</a><li>
+    
+      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
+    
+    </ul>
+</nav>
+
+  <div class="widget weibo">
+<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1814790134&verifier=4b6e507b&dpc=1"></iframe>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Nodejs/">Nodejs</a><small>1</small></li>
+  
+    <li><a href="/categories/nodejs/mysql/">mysql</a><small>1</small></li>
+  
+    <li><a href="/categories/nodejs/">nodejs</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+  
+    <li><a href="/categories/技术杂项/">技术杂项</a><small>7</small></li>
+  
+    <li><a href="/categories/生活琐事/">生活琐事</a><small>4</small></li>
+  
+    <li><a href="/categories/脚本技术/">脚本技术</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/HttpClinet/" style="font-size: 10.00px;">HttpClinet</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Mou/" style="font-size: 10.00px;">Mou</a><a href="/tags/Shell/" style="font-size: 10.00px;">Shell</a><a href="/tags/dubbo/" style="font-size: 10.00px;">dubbo</a><a href="/tags/githuh/" style="font-size: 10.00px;">githuh</a><a href="/tags/hexo/" style="font-size: 15.00px;">hexo</a><a href="/tags/idea/" style="font-size: 10.00px;">idea</a><a href="/tags/java/" style="font-size: 10.00px;">java</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/jdk/" style="font-size: 10.00px;">jdk</a><a href="/tags/logback/" style="font-size: 10.00px;">logback</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/mac shell/" style="font-size: 10.00px;">mac shell</a><a href="/tags/markdown/" style="font-size: 20.00px;">markdown</a><a href="/tags/mou/" style="font-size: 10.00px;">mou</a><a href="/tags/mysql/" style="font-size: 10.00px;">mysql</a><a href="/tags/nodejs/" style="font-size: 20.00px;">nodejs</a><a href="/tags/ntfs/" style="font-size: 10.00px;">ntfs</a><a href="/tags/sublime/" style="font-size: 15.00px;">sublime</a><a href="/tags/华夏银行/" style="font-size: 10.00px;">华夏银行</a><a href="/tags/感冒/" style="font-size: 10.00px;">感冒</a><a href="/tags/网络技术/" style="font-size: 10.00px;">网络技术</a>
+  </div>
+</div>
+
+
+    	<footer id="footer" class="inner"><div class="copyright">
+  
+  &copy; 2014 Winters
+  
+</div>
+
+
+
+</footer>
+    </aside>
+    
+    
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/">宅基地</a>
+    </div>
+    <div id="main-col" class="alignright">
+    <div id="wrapper">
+      
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title">Bower 用于web前端开发的包管理器</h1>
+  
+
+      <time datetime="2014-02-23T04:41:47.000Z"><a href="/2014/02/23/20140223-Bower/">2014-2月-23</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <h3 id="-">前言</h3>
+<p>一个新的web项目开始，我们总是很自然地去下载需要用到的js类库文件，比如jQuery，去官网下载名为jquery-1.10.2.min.js文件，放到我们的项目里。当项目又需要bootstrap的时候，我们会重复刚才的工作，去bootstrap官网下载对应的类库。如果bootstrap所依赖的jQuery并不是1.10.2，而是2.0.3时，我们会再重新下载一个对应版本的jQuery替换原来的。</p>
+<p>包管理是个复杂的问题，我们要知道谁依赖谁，还要明确哪个版本依赖哪个版本。这些对于开发人员来说，负担过重了。bower作为一个js依赖管理的工具，提供一种理想包管理方式，借助了npm的一些思想，为我们提供一个舒服的开发环境。</p>
+<p>你要还不动起手来试试bower，那你一定不会知道，前端开发是件多么享受的事。</p>
+<a id="more"></a>
+
+<p><img src="http://bower.jsbin.cn/img/bower-logo.png" alt="Bower">
+目录</p>
+<p>bower介绍
+bower安装
+bower命令
+bower使用
+用bower提交自己类库</p>
+<ol>
+<li>bower介绍</li>
+</ol>
+<p>Bower 是 twitter 推出的一款包管理工具，基于nodejs的模块化思想，把功能分散到各个模块中，让模块和模块之间存在联系，通过 Bower 来管理模块间的这种联系。</p>
+<p>包管理工具一般有以下的功能：</p>
+<p>注册机制：每个包需要确定一个唯一的 ID 使得搜索和下载的时候能够正确匹配，所以包管理工具需要维护注册信息，可以依赖其他平台。
+文件存储：确定文件存放的位置，下载的时候可以找到，当然这个地址在网络上是可访问的。
+上传下载：这是工具的主要功能，能提高包使用的便利性。比如想用 jquery 只需要 install 一下就可以了，不用到处找下载。上传并不是必备的，根据文件存储的位置而定，但需要有一定的机制保障。
+依赖分析：这也是包管理工具主要解决的问题之一，既然包之间是有联系的，那么下载的时候就需要处理他们之间的依赖。下载一个包的时候也需要下载依赖的包。
+功能介绍，摘自文章：<a href="http://chuo.me/2013/02/twitter-bower.html" target="_blank">http://chuo.me/2013/02/twitter-bower.html</a></p>
+<ol>
+<li>bower安装</li>
+</ol>
+<p>bower插件是通过npm, Node.js包管理器安装和管理的.</p>
+<p>我的系统环境</p>
+<p>win7 64bit
+Nodejs:v0.10.5
+Npm:1.2.19
+~ D:\workspace\javascript&gt;node -v
+v0.10.5</p>
+<p>~ D:\workspace\javascript&gt;npm -v
+1.2.19
+在系统中，我们已经安装好了Nodejs和npm。win7安装nodejs请参考文章：Nodejs开发框架Express3.0开发手记–从零开始</p>
+<p>安装bower 
+全局安装bower</p>
+<p>~ D:\workspace\javascript&gt;npm install bower -g
+新建一个express3的项目nodejs-bower</p>
+<p>~ D:\workspace\javascript&gt;express -e nodejs-bower
+~ D:\workspace\javascript&gt;cd nodejs-bower &amp;&amp; npm install</p>
+<ol>
+<li>bower命令</li>
+</ol>
+<p>bower安装后，我们就可以用bower这个命令了。</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower
+Usage:
+    bower  [] []
+Commands:
+    cache                   Manage bower cache
+    help                    Display help information about Bower
+    home                    Opens a package homepage into your favorite browser
+    info                    Info of a particular package
+    init                    Interactively create a bower.json file
+    install                 Install a package locally
+    link                    Symlink a package folder
+    list                    List local packages
+    lookup                  Look up a package URL by name
+    prune                   Removes local extraneous packages
+    register                Register a package
+    search                  Search for a package by name
+    update                  Update a local package
+    uninstall               Remove a local package
+Options:
+    -f, --force             Makes various commands more forceful
+    -j, --json              Output consumable JSON
+    -l, --log-level         What level of logs to report
+    -o, --offline           Do not hit the network
+    -q, --quiet             Only output important information
+    -s, --silent            Do not output anything, besides errors
+    -V, --verbose           Makes output more verbose
+    --allow-root            Allows running commands as root
+See &#39;bower help &#39; for more information on a specific command.
+Commands，列出了bower支持的各种命令。</p>
+<p>cache:bower缓存管理
+help:显示Bower命令的帮助信息
+home:通过浏览器打开一个包的github发布页
+info:查看包的信息
+init:创建bower.json文件
+install:安装包到项目
+link:在本地bower库建立一个项目链接
+list:列出项目已安装的包
+lookup:根据包名查询包的URL
+prune:删除项目无关的包
+register:注册一个包
+search:搜索包
+update:更新项目的包
+uninstall:删除项目的包</p>
+<ol>
+<li>bower使用</li>
+</ol>
+<p>1). 安装jQuery到项目nodejs-bower</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower install jquery
+bower jquery#<em>              not-cached git://github.com/components/jquery.git#</em>
+bower jquery#<em>                 resolve git://github.com/components/jquery.git#</em>
+bower jquery#<em>                download <a href="https://github.com/components/jquery/archive/2.0.3.tar.gz" target="_blank">https://github.com/components/jquery/archive/2.0.3.tar.gz</a>
+bower jquery#</em>                 extract archive.tar.gz
+bower jquery#*                resolved git://github.com/components/jquery.git#2.0.3
+bower jquery#~2.0.3            install jquery#2.0.3</p>
+<p>jquery#2.0.3 bower_components\jquery
+通过执行命令，我们可以看到jQuery的最新版本被下载，并安装到项目的bower_components\jquery目录</p>
+<p>查看bower_components/jquery目录，发现了3个文件。</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;ls bower_components/jquery -a
+.  ..  .bower.json  component.json  jquery.js
+同样地，我们的项目还需要d3的类库</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower install d3
+bower d3#<em>                  not-cached git://github.com/mbostock/d3.git#</em>
+bower d3#<em>                     resolve git://github.com/mbostock/d3.git#</em>
+bower d3#<em>                    download <a href="https://github.com/mbostock/d3/archive/v3.2.8.tar.gz" target="_blank">https://github.com/mbostock/d3/archive/v3.2.8.tar.gz</a>
+bower d3#</em>                     extract archive.tar.gz
+bower d3#*                    resolved git://github.com/mbostock/d3.git#3.2.8
+bower d3#~3.2.8                install d3#3.2.8</p>
+<p>d3#3.2.8 bower_components\d3
+非常方便，下载并安装完成！</p>
+<p>2). 查看项目中已导入的类库</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower list
+bower check-new     Checking for new versions of the project dependencies..
+nodejs-bower#0.0.0 D:\workspace\javascript\nodejs-bower
+├── d3#3.2.8
+└── jquery#2.0.3
+3). 安装bootstrap库，并查看依赖情况</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower install bootstrap
+bower bootstrap#<em>               cached git://github.com/twbs/bootstrap.git#3.0.0-rc1
+bower bootstrap#</em>             validate 3.0.0-rc1 against git://github.com/twbs/bootstrap.git#*
+bower jquery#&gt;= 1.9.0           cached git://github.com/components/jquery.git#2.0.3
+bower jquery#&gt;= 1.9.0         validate 2.0.3 against git://github.com/components/jquery.git#&gt;= 1.9.0
+bower bootstrap#~3.0.0-rc1     install bootstrap#3.0.0-rc1</p>
+<p>bootstrap#3.0.0-rc1 bower_components\bootstrap
+└── jquery#2.0.3</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower list
+bower check-new     Checking for new versions of the project dependencies..
+nodejs-bower#0.0.0 D:\workspace\javascript\nodejs-bower
+├─┬ bootstrap#3.0.0-rc1 extraneous
+│ └── jquery#2.0.3
+├── d3#3.2.8
+└── jquery#2.0.3
+我们发现bootstrap，对jquery是有依赖的。</p>
+<p>4). 删除jQuery库，破坏依赖关系</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower uninstall jquery
+bower conflict      bootstrap depends on jquery
+Continue anyway? (y/n) y
+bower uninstall     jquery</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower list
+bower check-new     Checking for new versions of the project dependencies..
+nodejs-bower#0.0.0 D:\workspace\javascript\nodejs-bower
+├─┬ bootstrap#3.0.0-rc1 extraneous
+│ └── jquery missing
+├── d3#3.2.8
+└── jquery missing
+5). 安装低版本的jQuery，制造不版本兼容</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower install jquery#1.7.2
+bower jquery#~2.0.3             cached git://github.com/components/jquery.git#2.0.3
+bower jquery#~2.0.3           validate 2.0.3 against git://github.com/components/jquery.git#~2.0.3
+bower jquery#&gt;= 1.9.0           cached git://github.com/components/jquery.git#2.0.3
+bower jquery#&gt;= 1.9.0         validate 2.0.3 against git://github.com/components/jquery.git#&gt;= 1.9.0
+bower jquery#1.7.2              cached git://github.com/components/jquery.git#1.7.2
+bower jquery#1.7.2            validate 1.7.2 against git://github.com/components/jquery.git#1.7.2</p>
+<p>Unable to find a suitable version for jquery, please choose one:
+    1) jquery#1.7.2 which resolved to 1.7.2
+    2) jquery#~2.0.3 which resolved to 2.0.3 and has nodejs-bower as dependants
+    3) jquery#&gt;= 1.9.0 which resolved to 2.0.3 and has bootstrap#3.0.0-rc1 as dependants</p>
+<p>Prefix the choice with ! to persist it to bower.json</p>
+<p>Choice: 1
+bower jquery#1.7.2             install jquery#1.7.2</p>
+<p>jquery#1.7.2 bower_components\jquery</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower list
+bower check-new     Checking for new versions of the project dependencies..
+nodejs-bower#0.0.0 D:\workspace\javascript\nodejs-bower
+├─┬ bootstrap#3.0.0-rc1 extraneous
+│ └── jquery#1.7.2 incompatible with &gt;= 1.9.0 (2.0.3 available)
+├── d3#3.2.8
+└── jquery#1.7.2 incompatible with ~2.0.3 (2.0.3 available)
+我们可以清楚的看到bower，很明确的告诉了我们，jquery和bootstrap是不兼容的，强大之处大家应该有所体会。</p>
+<p>6).升级jQuery，让版本兼容</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower update jquery
+bower jquery#~2.0.3             cached git://github.com/components/jquery.git#2.0.3
+bower jquery#~2.0.3           validate 2.0.3 against git://github.com/components/jquery.git#~2.0.3
+bower jquery#&gt;= 1.9.0           cached git://github.com/components/jquery.git#2.0.3
+bower jquery#&gt;= 1.9.0         validate 2.0.3 against git://github.com/components/jquery.git#&gt;= 1.9.0
+bower jquery#~2.0.3            install jquery#2.0.3</p>
+<p>jquery#2.0.3 bower_components\jquery</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower list
+bower check-new     Checking for new versions of the project dependencies..
+nodejs-bower#0.0.0 D:\workspace\javascript\nodejs-bower
+├─┬ bootstrap#3.0.0-rc1 extraneous
+│ └── jquery#2.0.3
+├── d3#3.2.8
+└── jquery#2.0.3
+多么智能，一键搞定，这才是高效的开发。</p>
+<p>7). 查看本地bower已经缓存的类库</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower cache list
+bootstrap=git://github.com/twbs/bootstrap.git#3.0.0-rc1
+d3=git://github.com/mbostock/d3.git#3.2.8
+jquery=git://github.com/components/jquery.git#1.7.2
+jquery=git://github.com/components/jquery.git#2.0.3
+8). 查看D3库信息</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower info d3
+d3</p>
+<p>  Versions:</p>
+<pre><code>- 3.2.8
+- 3.2.7
+- 3.2.6
+- 3.2.5
+- 3.2.4
+- 3.2.3
+...
+</code></pre><p>9). 查看dojo库的url</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower lookup dojo
+dojo git://github.com/dojo/dojo.git
+10). 用浏览器打开dojo的发布主页</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower home dojo
+bower dojo#<em>                not-cached git://github.com/dojo/dojo.git#</em>
+bower dojo#<em>                   resolve git://github.com/dojo/dojo.git#</em>
+bower dojo#<em>                  download <a href="https://github.com/dojo/dojo/archive/1.9.1.tar.gz" target="_blank">https://github.com/dojo/dojo/archive/1.9.1.tar.gz</a>
+bower dojo#</em>                   extract archive.tar.gz
+bower dojo#*                  resolved git://github.com/dojo/dojo.git#1.9.1
+浏览器自动打开：<a href="https://github.com/dojo/dojo" target="_blank">https://github.com/dojo/dojo</a></p>
+<p>11). 查询包含dojo的类库</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower search dojo
+Search results:</p>
+<pre><code>dojo git://github.com/dojo/dojo.git
+dojox git://github.com/dojo/dojox.git
+dojo-util git://github.com/dojo/util.git
+dojo-bootstrap git://github.com/samvdb/Dojo-Bootstrap
+</code></pre><p>真是方便实用的技术。</p>
+<ol>
+<li>用bower提交自己类库</li>
+</ol>
+<p>1). 生成bower.json配置文件</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower init
+bower existing      The existing bower.json file will be used and filled in
+[?] name: nodejs-bower
+[?] version: 0.0.0
+[?] main file:
+[?] set currently installed components as dependencies? No
+[?] add commonly ignored files to ignore list? Yes
+查看生成的文件bower.json</p>
+<p>{
+  &quot;name&quot;: &quot;nodejs-bower&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;ignore&quot;: [
+    &quot;<em>*/.</em>&quot;,
+    &quot;node_modules&quot;,
+    &quot;bower_components&quot;,
+    &quot;test&quot;,
+    &quot;tests&quot;
+  ],
+  &quot;dependencies&quot;: {
+    &quot;d3&quot;: &quot;git://github.com/mbostock/d3.git#~3.2.8&quot;,
+    &quot;jquery&quot;: &quot;git://github.com/components/jquery.git#~2.0.3&quot;
+  }
+}
+2). 在github创建一个资源库：nodejs-bower
+3). 本地工程绑定github</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;git init
+Initialized empty Git repository in D:/workspace/javascript/nodejs-bower/.git/</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;git add .
+~ D:\workspace\javascript\nodejs-bower&gt;git commit -m &quot;first commit&quot;</p>
+<h1 id="on-branch-master">On branch master</h1>
+<p>#</p>
+<h1 id="initial-commit">Initial commit</h1>
+<p>#</p>
+<h1 id="untracked-files-">Untracked files:</h1>
+<h1 id="-use-git-add-to-include-in-what-will-be-committed-">(use &quot;git add ...&quot; to include in what will be committed)</h1>
+<p>#</p>
+<h1 id="app-js">app.js</h1>
+<h1 id="bower-json">bower.json</h1>
+<h1 id="bower_components-">bower_components/</h1>
+<h1 id="node_modules-">node_modules/</h1>
+<h1 id="package-json">package.json</h1>
+<h1 id="public-">public/</h1>
+<h1 id="routes-">routes/</h1>
+<h1 id="views-">views/</h1>
+<p>nothing added to commit but untracked files present (use &quot;git add&quot; to track)</p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;git remote add origin <a href="https://github.com/bsspirit/nodejs-bower" target="_blank">https://github.com/bsspirit/nodejs-bower</a></p>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;git push -u origin master
+Counting objects: 565, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (516/516), done.
+Writing objects: 100% (565/565), 803.08 KiB, done.
+Total 565 (delta 26), reused 0 (delta 0)
+To <a href="https://github.com/bsspirit/nodejs-bower" target="_blank">https://github.com/bsspirit/nodejs-bower</a></p>
+<ul>
+<li>[new branch]      master -&gt; master
+Branch master set up to track remote branch master from origin.
+4). 注册到bower官方类库</li>
+</ul>
+<p>~ D:\workspace\javascript\nodejs-bower&gt;bower register nodejs-bower git@github.com:bsspirit/nodejs-bower.git
+bower                          convert Converted git@github.com:bsspirit/nodejs-bower.git to git://github.com/bsspirit/n
+odejs-bower.git
+bower nodejs-bower#<em>           resolve git://github.com/bsspirit/nodejs-bower.git#</em>
+bower nodejs-bower#<em>          checkout master
+bower nodejs-bower#</em>          resolved git://github.com/bsspirit/nodejs-bower.git#af3ceaac07
+Registering a package will make it visible and installable via the registry (<a href="https://bower.herokuapp.com" target="_blank">https://bower.herokuapp.com</a>), continue? (y/
+n)                    y
+bower nodejs-bower            register git://github.com/bsspirit/nodejs-bower.git</p>
+<p>Package nodejs-bower registered successfully!
+All valid semver tags on git://github.com/bsspirit/nodejs-bower.git will be available as versions.
+To publish a new version, you just need release a valid semver tag.</p>
+<p>Run bower info nodejs-bower to list the package versions.
+5). 查询我们自己的包</p>
+<p>D:\workspace\javascript\nodejs-bower&gt;bower search nodejs-bower
+Search results:</p>
+<pre><code>nodejs-bower git://github.com/bsspirit/nodejs-bower.git
+</code></pre><p>6). 安装我们自己的包</p>
+<p>D:\workspace\javascript\nodejs-bower&gt;bower install nodejs-bower
+bower nodejs-bower#<em>            cached git://github.com/bsspirit/nodejs-bower.git#af3ceaac07
+bower nodejs-bower#</em>          validate af3ceaac07 against git://github.com/bsspirit/nodejs-bower.git#<em>
+bower nodejs-bower#</em>           install nodejs-bower#af3ceaac07</p>
+<p>nodejs-bower#af3ceaac07 bower_components\nodejs-bower
+├── d3#3.2.8
+└── jquery#2.0.3
+其实模块化，版本依赖，开发类库，发布类库，安装类库，都是一条命令！还能再简单一点么！快把项目模块化，然后分享给大家吧！！未来是属于开发者的。</p>
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/1814790134"><strong>陨_日</strong></a> - 2014-2月-23</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://zhaijd.github.io"><strong>宅基地</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+	 
+     		  
+  
+  <div class="categories">
+    <a href="/categories/Nodejs/">Nodejs</a>
+  </div>
+
+       		
+  
+  <div class="tags">
+    <a href="/tags/javascript/">javascript</a>, <a href="/tags/nodejs/">nodejs</a>
+  </div>
+
+     		  
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style addthis addthis_toolbox addthis_default_style" style="color: black">
+	<span class="jiathis_txt"></span>
+	<a class="jiathis_button_tools_1"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a class="jiathis_button_tools_4"></a>
+	<a href="http://www.jiathis.com/share?uid=1784645" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1895863" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+       	 
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+ <h1 class="title">留言</h1>
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v2.uyan.cc/code/uyan.js?uid=1895863"></script>
+</section>
+
+</div>
+    </div>
+    <div class="tabbar" onload="divideTabBar()">
+	
+      <div class="tabbaritem"><a class="next" href="/">首页</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/archives/">博客</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/develop/">技术人生</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
+    
+</div>
+
+
+  </div>
+</body>
+</html>

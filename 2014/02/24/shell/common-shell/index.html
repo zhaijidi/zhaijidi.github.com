@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>常用脚本收藏 | 宅基地</title>
+  <meta name="author" content="Winters">
+  
+  <meta name="description" content="1. 通过hotelseq拼detail页链接
+有时我们会从数据库中或者数据分布文件中导出一份儿hotelseq列表，并需要将他们转换成外网detail页的链接，最好的办法是直接在sql里通过数据库提供的字符串函数来做，如果没有在sql里做，那么也可以通过这条awk脚本来做：
+1
+echo &quot;beijing_city_219&quot; | awk &#39;{lastindex=0; idx = 0; str = $0; while(1){idx = index(str, &quot;_&quot;); if(idx==0) break; str=substr(str, idx+1); lastindex+=idx;} cityurl = substr($0, 1, lastindex-1); seq = substr($0, lastindex+1); print &quot;http://hotel.qunar.com/&quot; cityurl &quot;/dt-&quot; seq }&#39;
+
+
+另外，使用sed的替换方法也可以完成，命令如下：
+1
+echo &quot;beijing_city_219&quot; | sed -n &#39;/_/p&#39; | sed -n  &#39;s/\(.*\)_\([0-9]*\)*$/http:\/\/hotel.qunar.com\/\1\/dt-\2/gp&#39;">
+  
+  
+  <meta property="og:title" content="常用脚本收藏"/>
+  <meta property="og:site_name" content="宅基地"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+   <link rel="apple-touch-icon" href="/icon.png" />
+   <link rel="shortcut icon" href="/favicon.png" >
+   <link rel="alternate" href="http://xxx.xx/atom.xml" title="宅基地" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="content" class="inner">
+    <aside id="sidebar" class="alignleft">
+      <div class="navigationBar">
+        <a href="/">宅基地</a>
+      </div>
+    	
+  <nav class="widget" id="menu">
+	<ul>
+    
+      <li class="cell"><a class="next" href="/">首页</a><li>
+    
+      <li class="cell"><a class="next" href="/archives/">博客</a><li>
+    
+      <li class="cell"><a class="next" href="/develop/">技术人生</a><li>
+    
+      <li class="cell"><a class="next" href="/about/">About</a><li>
+    
+      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
+    
+    </ul>
+</nav>
+
+  <div class="widget weibo">
+<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1814790134&verifier=4b6e507b&dpc=1"></iframe>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Nodejs/">Nodejs</a><small>1</small></li>
+  
+    <li><a href="/categories/nodejs/mysql/">mysql</a><small>1</small></li>
+  
+    <li><a href="/categories/nodejs/">nodejs</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+  
+    <li><a href="/categories/技术杂项/">技术杂项</a><small>7</small></li>
+  
+    <li><a href="/categories/生活琐事/">生活琐事</a><small>4</small></li>
+  
+    <li><a href="/categories/脚本技术/">脚本技术</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/HttpClinet/" style="font-size: 10.00px;">HttpClinet</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Mou/" style="font-size: 10.00px;">Mou</a><a href="/tags/Shell/" style="font-size: 10.00px;">Shell</a><a href="/tags/dubbo/" style="font-size: 10.00px;">dubbo</a><a href="/tags/githuh/" style="font-size: 10.00px;">githuh</a><a href="/tags/hexo/" style="font-size: 15.00px;">hexo</a><a href="/tags/idea/" style="font-size: 10.00px;">idea</a><a href="/tags/java/" style="font-size: 10.00px;">java</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/jdk/" style="font-size: 10.00px;">jdk</a><a href="/tags/logback/" style="font-size: 10.00px;">logback</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/mac shell/" style="font-size: 10.00px;">mac shell</a><a href="/tags/markdown/" style="font-size: 20.00px;">markdown</a><a href="/tags/mou/" style="font-size: 10.00px;">mou</a><a href="/tags/mysql/" style="font-size: 10.00px;">mysql</a><a href="/tags/nodejs/" style="font-size: 20.00px;">nodejs</a><a href="/tags/ntfs/" style="font-size: 10.00px;">ntfs</a><a href="/tags/sublime/" style="font-size: 15.00px;">sublime</a><a href="/tags/华夏银行/" style="font-size: 10.00px;">华夏银行</a><a href="/tags/感冒/" style="font-size: 10.00px;">感冒</a><a href="/tags/网络技术/" style="font-size: 10.00px;">网络技术</a>
+  </div>
+</div>
+
+
+    	<footer id="footer" class="inner"><div class="copyright">
+  
+  &copy; 2014 Winters
+  
+</div>
+
+
+
+</footer>
+    </aside>
+    
+    
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/">宅基地</a>
+    </div>
+    <div id="main-col" class="alignright">
+    <div id="wrapper">
+      
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title">常用脚本收藏</h1>
+  
+
+      <time datetime="2014-02-24T04:04:51.000Z"><a href="/2014/02/24/shell/common-shell/">2014-2月-24</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <h3 id="1-hotelseq-detail-">1. 通过hotelseq拼detail页链接</h3>
+<p>有时我们会从数据库中或者数据分布文件中导出一份儿hotelseq列表，并需要将他们转换成外网detail页的链接，最好的办法是直接在sql里通过数据库提供的字符串函数来做，如果没有在sql里做，那么也可以通过这条awk脚本来做：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>echo <span class="string">"beijing_city_219"</span> | awk '{lastindex=<span class="number">0</span>; idx = <span class="number">0</span>; str = $<span class="number">0</span>; <span class="keyword">while</span>(<span class="number">1</span>){idx = index(str, <span class="string">"_"</span>); <span class="keyword">if</span>(idx==<span class="number">0</span>) <span class="keyword">break</span>; str=substr(str, idx+<span class="number">1</span>); lastindex+=idx;} cityurl = substr($<span class="number">0</span>, <span class="number">1</span>, lastindex-<span class="number">1</span>); seq = substr($<span class="number">0</span>, lastindex+<span class="number">1</span>); print <span class="string">"http://hotel.qunar.com/"</span> cityurl <span class="string">"/dt-"</span> seq }'
+</pre></td></tr></table></figure>
+
+<p>另外，使用sed的替换方法也可以完成，命令如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>echo "beijing_city_219" | sed -n '/_/p' | sed -n  's/<span class="command">\(</span>.*<span class="command">\)</span>_<span class="command">\(</span><span class="special">[</span>0-9<span class="special">]</span>*<span class="command">\)</span>*<span class="formula">$/http:<span class="command">\/</span><span class="command">\/</span>hotel.qunar.com<span class="command">\/</span>\1<span class="command">\/</span>dt-\2/gp'</span>
+</pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="2-">2. 对日志中某一数字列求和</h3>
+<p>当时是为了从日志中找出一天内一台twell发了多少消息，twell记录发消息的日志格式为：presend finished ignored 17,recieved 0, send 5，我们需要统计的是send后的数量，对其做sum，我们可以通过这条awk脚本来实现，假设这个日志文件为当前目录下的rebuild1.txt:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>awk '{sum+=$NF;}<span class="operator"><span class="keyword">END</span>{print <span class="aggregate">sum</span>}<span class="string">' rebuild1.txt</span></span>
+</pre></td></tr></table></figure>
+
+<p>上述命令利用了awk中NF变量，NF为总字段数，$NF表示最后一个字段的值
+也可以使用sed命令完成，命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>cat rebuild1.txt | sed  's/.*send<span class="special">[</span><span class="special">[</span>:blank:<span class="special">]</span><span class="special">]</span><span class="command">\+</span><span class="command">\(</span><span class="special">[</span>0-9<span class="special">]</span><span class="command">\+</span><span class="command">\)</span>.*/\1/g' | awk '<span class="special">{</span>sum+=<span class="formula">$1<span class="special">}</span> END<span class="special">{</span>print sum<span class="special">}</span>'</span>
+</pre></td></tr></table></figure>
+
+<p>利用sed命令找出每行在send后面的数字，组成一个只有一列的文件，然后利用awk求和</p>
+<h3 id="3-twell-">3. 查看每台twell的版本号</h3>
+<p>twell发布前端代码后，一个很重要的发布后检查项为version文件，如果version文件不对，那么就可能因为浏览器缓存导致样式错乱或者脚本功能不对。检查version文件的方法是在cn2跳板机或任何一台能够ssh到twell服务器的机器上执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">for</span> i <span class="keyword">in</span> {<span class="number">1</span>..<span class="number">8</span>} b1 b2
+<span class="keyword">do</span> ssh l-tw<span class="variable">$i</span>.h.cn2 <span class="string">"cat /server/hotel.qunar.com/htdocs/ROOT/version"</span>
+<span class="keyword">done</span>
+</pre></td></tr></table></figure>
+
+<h3 id="4-tomcat-access-log-uri-">4.统计tomcat access log中各uri被访问的次数</h3>
+<p>有些时候我们需要统计某一个高峰时段，或者一天之内web app的哪些页面对访问过，且被访问了多少次。我们可以通过如下脚本来实现。假设tomcat access log文件为当前目录下的localaccess_0406.txt，我们需要统计9:30:00-9:35:59这段时间内被访问过的页面以及对应的访问次数，并将结果写入自己的home目录下的access_0406_uris_0930文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>grep '<span class="number">06</span>/Apr/<span class="number">2011</span>:<span class="number">09</span>:<span class="number">3</span>[<span class="number">0</span>-<span class="number">5</span>]' localaccess_0406.txt | awk '{a=$<span class="number">0</span>; b=index(a, <span class="string">"GET"</span>); use_get=<span class="number">1</span>; <span class="keyword">if</span>(b==<span class="number">0</span>){ use_get=<span class="number">0</span>; b=index(a,<span class="string">"POST"</span>);}; b=b+(use_get&gt;<span class="number">0</span>?<span class="number">4</span>:<span class="number">5</span>); <span class="keyword">if</span>(b!=<span class="number">0</span>){ e=index(a, <span class="string">"?"</span>); e1=index(a,<span class="string">"HTTP/1.0"</span>); <span class="keyword">if</span>(e1 &gt; <span class="number">0</span>) {e = e1 &gt; e && e &gt; <span class="number">0</span>? e:e1}; c=substr(a, b, e-b); print c;}}' | sort | uniq -c | sort -rn&gt; ~/access_0406_uris_0930
+</pre></td></tr></table></figure>
+
+<p>另外，也可以使用sed命令完成，命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">grep</span> <span class="string">'06/Dec/2012:14:13:00'</span> access.<span class="number">2012</span>-<span class="number">12</span>-<span class="number">06</span>.<span class="keyword">log</span>  | sed -r <span class="string">'s/^.*((GET)|(POST))([^?]*?).*HTTP.*$/\4/g'</span> | <span class="keyword">sort</span> | uniq -c
+</pre></td></tr></table></figure>
+
+<p>sed命令提出每行中 POST或GET后的网址，组成一个单列的文本，然后再sort ,uniq</p>
+<h3 id="5-tomcat-access-log-ip-ua-">5. 对tomcat access log中的用户ip和ua做统计</h3>
+<p>咱们的tomcat access log中，每一行的最后一列记录的是访问这个url的客户端ip，那么这个统计可以实现为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>cat localaccess_0406 | awk <span class="string">'{print $NF}'</span> | <span class="built_in">sort</span> | uniq -c| <span class="built_in">sort</span> -rn &gt; ip_0406_stat
+</pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">atnodes</span> -L $<span class="string">'zcat /home/q/www/hotel.qunar.com/logs/access.2012-08-30.log.gz | perl -lne \'if(<span class="variable">$_</span>=~m/2012:2[0-3].*GET \/price\/detail.jsp.*MSIE/){my <span class="variable">@words</span>=split /"/, <span class="variable">$_</span>; <span class="variable">$size</span>=<span class="variable">@words</span>; print <span class="variable">$words</span>[<span class="variable">$size</span>-4];}\''</span> l-tw[<span class="number">1</span>-<span class="number">18</span>].h.cn6.qunar.com
+</pre></td></tr></table></figure>
+
+<p>如果每行只出现一个IP，且位置不固定，也可以用sed命令提取出每行中的IP地址，组成单列的文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>cat localaccess_0406 | sed  's/<span class="command">\(</span>.*<span class="special">[</span>酒店系统运维常用脚本（非脚本内容请放别处）^0-9<span class="special">]</span><span class="command">\+</span><span class="command">\|</span>^<span class="command">\)</span><span class="command">\(</span><span class="special">[</span>0-9<span class="special">]</span><span class="command">\{</span>1,3<span class="command">\}</span><span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="command">\{</span>1,3<span class="command">\}</span><span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="command">\{</span>1,3<span class="command">\}</span><span class="command">\.</span><span class="special">[</span>0-9<span class="special">]</span><span class="command">\{</span>1,3<span class="command">\}</span><span class="command">\)</span><span class="command">\(</span><span class="special">[</span>酒店系统运维常用脚本（非脚本内容请放别处）^0-9<span class="special">]</span><span class="command">\+</span>.*<span class="command">\|</span><span class="formula">$<span class="command">\)</span>.*/\2/g' |sort  |uniq -c | sort -k1 -nr &gt; ip_0406_stat</span>
+</pre></td></tr></table></figure>
+
+<h3 id="6-uri-cityurl-fromdate-price-localaccess_0407_1400-">6. 按照uri, cityurl, fromDate对price目录下的文件的访问做统计。假设日志文件为 localaccess_0407_1400，所有操作都作用在当前目录下</h3>
+<p>（1）过滤出所有price目录下的访问</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">grep</span> <span class="string">'price'</span> localaccess_0407_140<span class="number">0</span> &gt; localaccess_0407_1400_price
+</pre></td></tr></table></figure>
+
+<p>（2）过滤每一行访问日志，只留下uri和参数中的cityurl和fromDate：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>cat  localaccess_0407_1400_price | awk '{a=$<span class="number">0</span>; b=index(a, <span class="string">"GET"</span>); use_get=<span class="number">1</span>; <span class="keyword">if</span>(b==<span class="number">0</span>){ use_get=<span class="number">0</span>; b=index(a,<span class="string">"POST"</span>);}; b=b+(use_get&gt;<span class="number">0</span>?<span class="number">4</span>:<span class="number">5</span>); <span class="keyword">if</span>(b!=<span class="number">0</span>){e1=index(a,<span class="string">"HTTP/1.0"</span>);c=substr(a, b, e1-b); cqidx = index(c, <span class="string">"?"</span>); <span class="keyword">if</span>(cqidx &gt; <span class="number">0</span>){c1=substr(c, <span class="number">0</span>, cqidx-<span class="number">1</span>); c2=substr(c, cqidx+<span class="number">1</span>, <span class="property">length</span>(c)-cqidx); split(c2, carr, <span class="string">"&"</span>); <span class="keyword">for</span>(i <span class="keyword">in</span> carr){param=carr[i]; cityIdx = index(param, <span class="string">"cityurl="</span>); <span class="keyword">if</span>(cityIdx&gt;<span class="number">0</span>){city=substr(param, cityIdx+<span class="number">8</span>);} fromIdx = index(param, <span class="string">"fromDate="</span>); <span class="keyword">if</span>(fromIdx&gt;<span class="number">0</span>){fromDate=substr(param, fromIdx+<span class="number">9</span>);}} print c1 <span class="string">" "</span> city <span class="string">" "</span> fromDate}}}' &gt; localaccess_0407_1400_city_fromDate
+</pre></td></tr></table></figure>
+
+<p>（3）按照uri, cityurl，fromDate group by</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>cat localaccess_0407_1400_city_fromDate | <span class="built_in">sort</span> | uniq -c | <span class="built_in">sort</span> -rn &gt; localaccess_0407_1400_city_fromDate_stat
+</pre></td></tr></table></figure>
+
+<p>以上三条语句也可合成一个，使用sed的脚本如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">grep</span> <span class="string">'price'</span> localaccess_0407_140<span class="number">0</span> | sed -r <span class="string">'s/^.*(POST|GET)[[:blank:]]([酒店系统运维常用脚本（非脚本内容请放别处）^\?]+)\?.*cityurl=([酒店系统运维常用脚本（非脚本内容请放别处）^&]*).*fromDate=([^&[:blank:]]*).*$/\2 \3 \4/'</span> | <span class="keyword">sort</span> | uniq -c | <span class="keyword">sort</span> -rn &gt; localaccess_0407_1400_city_fromDate_stat
+</pre></td></tr></table></figure>
+
+<h3 id="7-grep-">7. grep 对多搜索模式的支持</h3>
+<p>以下两种方法都可以实现对多搜索模式的支持：</p>
+<p>（1）grep -e</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>grep <span class="operator">-e</span> <span class="string">'06/Apr/2011:09:3[0-2]'</span> <span class="operator">-e</span> <span class="string">'06/Apr/2011:09:3[3-5]'</span> localaccess_0406_0930
+</pre></td></tr></table></figure>
+
+<p>（2）grep -E</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>grep -<span class="keyword">E</span> <span class="string">'(06/Apr/2011:09:3[0-2])|(06/Apr/2011:09:3[3-5])'</span> localaccess_0406_0930
+</pre></td></tr></table></figure>
+
+<h3 id="8-q-">8. 分析q-后的查询条件</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">for</span> i <span class="keyword">in</span> {<span class="number">12</span>..<span class="number">23</span>}; <span class="keyword">do</span> zcat /home/q/www/hslist/logs/catalina.out.<span class="number">2011</span>-<span class="number">05</span>-<span class="number">15</span>-<span class="variable">$i</span>-<span class="number">02</span>.gz | grep <span class="string">'doSearch error, uri:'</span> &gt;&gt; timeout_uris; <span class="keyword">done</span>
+</pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">zcat</span> /home/q/www/hslist/logs/catalina.out.<span class="number">2011</span>-<span class="number">05</span>-<span class="number">04</span>-<span class="regexp">*.gz</span>| grep <span class="string">'doSearch error, uri'</span> | sed -r <span class="string">'s/.*q=([酒店系统运维常用脚本（非脚本内容请放别处）^&]*).*$/\1/'</span> | perl -e <span class="string">'while(&lt;&gt;) { use URI::Escape; print uri_unescape(<span class="variable">$_</span>);}'</span> | sort | uniq &gt; <span class="built_in">error</span>Queries
+</pre></td></tr></table></figure>
+
+<h3 id="9-awk-">9. 使用awk合并两个文件中数据</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">awk</span> <span class="string">'NR==FNR{ name[x++]=<span class="variable">$1</span> }NR&gt;FNR{ print name[i++] " "  <span class="variable">$1</span>}'</span> <span class="number">1</span>.txt <span class="number">2</span>.txt| more
+</pre></td></tr></table></figure>
+
+<p>|1.txt:|
+|111111|
+|222222|
+|333333|</p>
+<h3 id="10-awk-">10.使用awk对比两个文件然后输出结果</h3>
+<p>比较两个文件 找出1不在2中的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>awk 'NR==FNR{<span class="literal">a</span>[$<span class="number">0</span>]++}NR&gt;FNR{<span class="keyword">if</span>(<span class="literal">a</span>[$<span class="number">0</span>]==<span class="number">0</span>) print}' <span class="number">1</span>.txt <span class="number">2</span>.txt &gt; diff.txt
+</pre></td></tr></table></figure>
+
+<p>也可以使用grep来实现
+grep -vFf 文件B 文件A  找到A中的没有在B中出现过的
+文件大不建议用grep，可能会溢出</p>
+<h3 id="11-accesslog-url-">11.通过accesslog整理出用于压力测试的URL列表</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>zcat localhost_access_log<span class="number">.2011</span>-<span class="number">06</span>-<span class="number">20</span> | awk '{a=$<span class="number">0</span>; b=index(a, <span class="string">"GET"</span>); use_get=<span class="number">1</span>; <span class="keyword">if</span>(b==<span class="number">0</span>){ use_get=<span class="number">0</span>; b=index(a,<span class="string">"POST"</span>);}; b=b+(use_get&gt;<span class="number">0</span>?<span class="number">4</span>:<span class="number">5</span>); <span class="keyword">if</span>(b!=<span class="number">0</span>){ e1=index(a,<span class="string">"HTTP/1.0"</span>); <span class="keyword">if</span>(e1 &gt; <span class="number">0</span>) {e = e1}; c=substr(a, b, e-b); print c;}}' &gt; <span class="number">2011</span>-<span class="number">06</span>-<span class="number">20.</span>url
+cat <span class="number">2011</span>-<span class="number">06</span>-<span class="number">20.</span>url | awk '{print <span class="string">"http://hotel.qunar.com"</span> $<span class="number">0</span>}' &gt; <span class="number">2011</span>-<span class="number">06</span>-<span class="number">20.</span>url.txt
+cat <span class="number">2011</span>-<span class="number">06</span>-<span class="number">20.</span>url.txt | sed -r <span class="attribute">'s</span>/fromDate=((<span class="number">2010</span>-\d{<span class="number">2</span>}-\d{<span class="number">2</span>})|(<span class="number">2011</span>-<span class="number">0</span>[<span class="number">0</span>-<span class="number">5</span>]-\d{<span class="number">2</span>})|(<span class="number">2011</span>-<span class="number">06</span>-[<span class="number">0</span>-<span class="number">1</span>]\d)|(<span class="number">2011</span>-<span class="number">06</span>-<span class="number">2</span>[<span class="number">0</span>-<span class="number">2</span>]))/fromDate=<span class="number">2011</span>-<span class="number">06</span>-<span class="number">23</span>/' |  sed -r <span class="attribute">'s</span>/toDate=((<span class="number">2010</span>-\d{<span class="number">2</span>}-\d{<span class="number">2</span>})|(<span class="number">2011</span>-<span class="number">0</span>[<span class="number">0</span>-<span class="number">5</span>]-\d{<span class="number">2</span>})|(<span class="number">2011</span>-<span class="number">06</span>-[<span class="number">0</span>-<span class="number">1</span>]\d)|(<span class="number">2011</span>-<span class="number">06</span>-<span class="number">2</span>[<span class="number">0</span>-<span class="number">3</span>]))/toDate=<span class="number">2011</span>-<span class="number">06</span>-<span class="number">24</span>/' &gt; urls<span class="number">.2011</span><span class="number">.06</span><span class="number">.21</span>.txt
+</pre></td></tr></table></figure>
+
+<h3 id="12-">12.清理日志</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="shebang">#!/bin/sh</span>
+<span class="function"><span class="title">foreachd</span></span>(){
+<span class="keyword">for</span> file <span class="keyword">in</span> <span class="variable">$1</span>/*.<span class="variable">$2</span>
+<span class="keyword">do</span>
+    <span class="built_in">echo</span> <span class="string">""</span> &gt;  <span class="variable">$file</span>
+<span class="keyword">done</span>
+}
+foreachd <span class="string">"."</span> <span class="string">"log"</span>
+</pre></td></tr></table></figure>
+
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/1814790134"><strong>陨_日</strong></a> - 2014-2月-24</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://zhaijd.github.io"><strong>宅基地</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+	 
+     		  
+  
+  <div class="categories">
+    <a href="/categories/脚本技术/">脚本技术</a>
+  </div>
+
+       		
+  
+  <div class="tags">
+    <a href="/tags/Shell/">Shell</a>
+  </div>
+
+     		  
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style addthis addthis_toolbox addthis_default_style" style="color: black">
+	<span class="jiathis_txt"></span>
+	<a class="jiathis_button_tools_1"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a class="jiathis_button_tools_4"></a>
+	<a href="http://www.jiathis.com/share?uid=1784645" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1895863" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+       	 
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+ <h1 class="title">留言</h1>
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v2.uyan.cc/code/uyan.js?uid=1895863"></script>
+</section>
+
+</div>
+    </div>
+    <div class="tabbar" onload="divideTabBar()">
+	
+      <div class="tabbaritem"><a class="next" href="/">首页</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/archives/">博客</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/develop/">技术人生</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
+    
+</div>
+
+
+  </div>
+</body>
+</html>
